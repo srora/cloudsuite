@@ -1,3 +1,4 @@
+#check_for_spark
 FROM ubuntu:14.04
 
 # Install dependencies
