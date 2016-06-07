@@ -1,3 +1,4 @@
+set -x
 path=$(git --no-pager diff --name-only ${TRAVIS_COMMIT_RANGE})
 paths=( $path )
 counter=0
