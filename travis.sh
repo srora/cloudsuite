@@ -23,12 +23,12 @@ while [[ ${paths[counter]} ]];
 
 	echo "Entered while"
 
-	if [ "${check1}" = "${benchmark}" && "${check2}" = "${tag}" ]
+	if [ "${check1}" = "${benchmark}" ] && [ "${check2}" = "${tag}" ]
 	    then
 
 		 travis_wait 40 docker build -t $DH_REPO:$IMG_TAG $DF_PATH
 
-		 if [ "${TRAVIS_PULL_REQUEST}" = "false" && "${TRAVIS_BRANCH}" = "master" ]
+		 if [ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "master" ]
 
 		   then
 			docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USER" -p="$DOCKER_PASS"
