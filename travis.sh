@@ -20,7 +20,7 @@ while [[ ${paths[counter]} ]];
 	benchmark="${benchmark%%/*}";
 	tag="${tag%%/*}";
 
-	if [ "${benchmark_name}" = "${benchmark}" ] && [ "${tag_name}" = "${tag}" ]
+	if [ "${benchmark_name}" = "${benchmark}" ] && ( [ "${tag_name}" = "${tag}" ] || [ "${tag_name}" = "latest" ] )
 	    then
 
 		 travis_wait 40 docker build -t $DH_REPO:$IMG_TAG $DF_PATH
