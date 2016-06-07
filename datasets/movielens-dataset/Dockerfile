@@ -1,3 +1,4 @@
+#check for dataset
 FROM ubuntu:14.04
 
 # Download datasets
@@ -17,4 +18,3 @@ RUN BUILD_DEPS="curl unzip" \
 COPY files /data/
 
 VOLUME ["/data"]
-
