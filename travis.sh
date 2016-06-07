@@ -1,4 +1,5 @@
 set -x
+echo "TRAVIS_COMMIT_RANGE= ${TRAVIS_COMMIT_RANGE}"
 path=$(git --no-pager diff --name-only ${TRAVIS_BRANCH} $(git merge-base ${TRAVIS_BRANCH} master))
 paths=( $path )
 counter=0
